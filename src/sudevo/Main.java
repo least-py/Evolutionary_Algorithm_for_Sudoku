@@ -1,0 +1,64 @@
+package sudevo;
+
+import sudevo_1.Main_1;
+import sudevo_2.Main_2;
+
+public class Main {
+
+	private static String path;
+	private static String chart_path;
+	
+	public static void main(String[] args) {
+	
+	//Beispiel für path: "jdbc:sqlite:C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\"
+		
+	chart_path = "C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\";
+	path = "jdbc:sqlite:C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\";
+	
+	
+	//Falls visu3 auch getestet wird, sollte die Populationsgröße verringert werden.
+	//Ansonsten entstehen über 50 Diagramme!!
+	
+	//Darauf achten, dass die Methoden der beiden Main Klassen mit Tabellennamen gestartet werden, die noch nicht existieren.
+	//Methoden aus Visualisation mit Tabellennamen starten, die bereits existieren -> Main vor Visualisation
+	
+	//Darauf achten, dass man bei 0 (Tabellenversionen) beginnt, wenn man visu2 testet.
+	
+	//Datenbanken werden automatisch erstellt, wenn sie vorher nicht existierten.
+	
+	//Algorithmus_1 testen
+	
+	Main_1.ev_stragety("test_1_0", "test", 0.8, 0.8, 5, 2000, 0.2, 0.9);
+	Main_1.ev_stragety("test_1_1", "test", 0.8, 0.8, 5, 2000, 0.2, 0.9);
+	Main_1.ev_stragety("test_1_2", "test", 0.8, 0.8, 5, 2000, 0.2, 0.9);
+	Visualisation.visu("test_1_1", "test");
+	Visualisation.visu2("test_1_", "test", 3, 2000);
+	Visualisation.visu3("test_1_1", "test");
+	
+	//Algorithmus_2 testen
+	Main_2.gcp_test("test_2_0", "test", 25, 2000, 0.5, 1.0, 5, 1.0);
+	Main_2.gcp_test("test_2_1", "test", 25, 2000, 0.5, 1.0, 5, 1.0);
+	Main_2.gcp_test("test_2_2", "test", 25 ,2000, 0.5, 1.0, 5, 1.0);
+	Visualisation.visu("test_2_0", "test");
+	
+	
+	
+	Visualisation.visu2("test_2_", "test", 3, 2000);
+	
+	
+	//Auf Exceptions gefasst machen
+	//-> oberen Teil auskommentieren und erneut laufen lasssen
+	Visualisation.visu3("test_1_1", "test");
+	Visualisation.visu3("test_2_1", "test");
+	}
+
+	public static String getChartPath() {
+		return chart_path;
+	}
+	
+	public static String getPath() {
+		return path;
+	}
+
+
+}
