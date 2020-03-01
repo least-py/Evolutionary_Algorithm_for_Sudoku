@@ -6,6 +6,7 @@ import java.io.*;
 import org.apache.batik.dom.GenericDOMImplementation;
 import org.apache.batik.svggen.SVGGraphics2D;
 import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
@@ -209,8 +210,8 @@ public class Visualisation {
 			dataset.addSeries(series[2]);
 			
 			dot = new XYDotRenderer();
-			dot.setDotHeight(4);
-			dot.setDotWidth(4);
+			//dot.setDotHeight(4);
+			//dot.setDotWidth(4);
 
 			xax = new NumberAxis("Generation");
 		    yax = new NumberAxis("Fitness");
@@ -220,7 +221,7 @@ public class Visualisation {
 			
 			plot = new XYPlot(dataset, xax, yax, dot);
 			chart = new JFreeChart(plot);
-			chart = ChartFactory.createXYLineChart("Fitnessverlauf_"+tn, "Generationen", "Fitness", dataset);
+			chart = ChartFactory.createXYLineChart("Fitnessverlauf_"+tn, "Generationen", "Fitness", dataset, PlotOrientation.VERTICAL, true, true, true);
 			chartPanel = new ChartPanel(chart);
 			punkteframe.setContentPane(chartPanel);
 			punkteframe.pack();
@@ -331,8 +332,8 @@ public class Visualisation {
 			dataset.addSeries(series[2]);
 			
 			dot = new XYDotRenderer();
-			dot.setDotHeight(4);
-			dot.setDotWidth(4);
+			//dot.setDotHeight(4);
+			//dot.setDotWidth(4);
 
 			xax = new NumberAxis("Generation");
 		    yax = new NumberAxis("Fitness");
@@ -342,7 +343,7 @@ public class Visualisation {
 			
 			plot = new XYPlot(dataset, xax, yax, dot);
 			chart = new JFreeChart(plot);
-			chart = ChartFactory.createXYLineChart("Fitnessverlauf", "Generationen", "Fitness", dataset);
+			chart = ChartFactory.createXYLineChart("Fitnessverlauf", "Generationen", "Fitness", dataset, PlotOrientation.VERTICAL, true, true, true);
 			chartPanel = new ChartPanel(chart);
 			//punkteframe.setContentPane(chartPanel);
 			//punkteframe.pack();
@@ -462,8 +463,8 @@ public class Visualisation {
 				
 				
 				dot = new XYDotRenderer();
-				dot.setDotHeight(4);
-				dot.setDotWidth(4);
+				//dot.setDotHeight(4);
+				//dot.setDotWidth(4);
 
 				xax = new NumberAxis("Generation");
 			    yax = new NumberAxis("Beliebtheit");
@@ -473,7 +474,7 @@ public class Visualisation {
 				
 				plot = new XYPlot(dataset, xax, yax, dot);
 				chart = new JFreeChart(plot);
-				chart = ChartFactory.createXYLineChart("Beliebheitsverlauf", "Generationen", "Beliebheit und Wechsel", dataset);
+				chart = ChartFactory.createXYLineChart("Beliebheitsverlauf", "Generationen", "Beliebheit und Wechsel", dataset, PlotOrientation.VERTICAL, true, true, true);
 				
 				chartPanel = new ChartPanel(chart);
 				punkteframe.setContentPane(chartPanel);
@@ -583,8 +584,8 @@ public class Visualisation {
 			dataset.addSeries(series[3]);
 			
 			dot = new XYDotRenderer();
-			dot.setDotHeight(4);
-			dot.setDotWidth(4);
+			//dot.setDotHeight(4);
+			//dot.setDotWidth(4);
 
 			xax = new NumberAxis("Generation");
 		    yax = new NumberAxis("Ähnlichkeit und Anzahl der Zuordnungen");
@@ -594,7 +595,7 @@ public class Visualisation {
 			
 			plot = new XYPlot(dataset, xax, yax, dot);
 			chart = new JFreeChart(plot);
-			chart = ChartFactory.createXYLineChart("Ähnlichkeitsverlauf_"+ iv_index+"_"+tn, "Generationen", "Ähnlichkeit und Anzahl an Zuordnungen", dataset);
+			chart = ChartFactory.createXYLineChart("Ähnlichkeitsverlauf_"+ iv_index+"_"+tn, "Generationen", "Ähnlichkeit und Anzahl an Zuordnungen", dataset, PlotOrientation.VERTICAL, true, true, true);
 			
 			chartPanel = new ChartPanel(chart);
 			punkteframe.setContentPane(chartPanel);
