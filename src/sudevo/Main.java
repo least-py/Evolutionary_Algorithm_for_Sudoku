@@ -1,5 +1,7 @@
 package sudevo;
 
+import javax.swing.JFileChooser;
+
 import sudevo_1.Main_1;
 import sudevo_2.Main_2;
 
@@ -12,8 +14,31 @@ public class Main {
 	
 	//Beispiel für path: "jdbc:sqlite:C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\"
 		
-	chart_path = "C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\";
-	path = "jdbc:sqlite:C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\";
+	//chart_path = "C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\";
+	
+	//String filePath;    // File path plus name and file extension
+	
+	
+	//path = "jdbc:sqlite:C:\\Users\\Lea\\eclipse-workspace\\Evolutionary_Algorithm\\";
+		
+	JFileChooser chooser = new JFileChooser();
+	chooser.setCurrentDirectory(new java.io.File("."));
+	chooser.setDialogTitle("choosertitle");
+	chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+	chooser.setAcceptAllFileFilterUsed(false);
+
+	while(chart_path == null) {
+		if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+			System.out.println("getCurrentDirectory(): " + chooser.getCurrentDirectory());
+			path = "jdbc:sqlite:"+chooser.getCurrentDirectory()+"\\";
+			chart_path = ""+chooser.getSelectedFile()+"\\";
+			System.out.println(chart_path);
+			
+		} else {
+			System.out.println("Select a path for saving your charts");
+		}
+	}
+	
 	
 	
 	//Falls visu3 auch getestet wird, sollte die Populationsgröße verringert werden.
@@ -59,6 +84,6 @@ public class Main {
 	public static String getPath() {
 		return path;
 	}
-
+	
 
 }
