@@ -1,1 +1,0 @@
-java -cp bin/;lib/batik-awt-util.jar;lib/batik-dom.jar;lib/batik-svggen.jar;lib/batik-util.jar;lib/batik-xml.jar;lib/jcommon-1.0.0.jar;lib/jfreechart-1.0.0.jar Demo

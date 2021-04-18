@@ -18,6 +18,7 @@ public class Main extends Application {
 	private static int amount_of_cells = sudoku_size_N * sudoku_size_N;
 	private static String[] grid_labels = new String[amount_of_cells];
 	
+	
     @Override
     public void start(final Stage stage) {
     	
@@ -26,7 +27,7 @@ public class Main extends Application {
         grid_labels = new String[]{"1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G"};
         
         //init_grid_labels
-        fill_sudoku_grid_with_constr(grid, 50);
+        fill_sudoku_grid_with_constr(grid, 80);
         
         
         grid.setStyle("-fx-background-color: grey; -fx-padding: 2; -fx-hgap: 2; -fx-vgap: 2;");
