@@ -3,10 +3,6 @@ package Evolutionary_Algorithm;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import sudevo_gcp_strategy.Individual_2;
-import sudevo_gcp_strategy.Main_gcp;
-
-
 public class Diversity {
 
 	public static int N = Sudevo.Main.N;
@@ -22,14 +18,14 @@ public class Diversity {
 		return (double) (match / (quadr_N));
 	}
 	
-	public static void associate_similarity(Individual_2 given_indivudal) {
+	public static void associate_similarity(Individual given_indivudal) {
 		// Contains the similarity to each individual of the source population
 		ArrayList<Double> similarity_list = new ArrayList<Double>();
 
 		double similarity = 0.0;
 		ArrayList<Double> list = new ArrayList<Double>();
 
-		for (Individual_2 iterated_individual : Main_gcp.getInitial_pop()) {
+		for (Individual iterated_individual : EvolutionaryCircle.getInitial_pop()) {
 			similarity = calc_similarity(given_indivudal.getGenome(), iterated_individual.getGenome());
 			list.add(similarity);
 			similarity_list.add(similarity);
