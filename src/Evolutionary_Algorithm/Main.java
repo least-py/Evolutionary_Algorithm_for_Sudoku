@@ -18,10 +18,10 @@ public class Main {
 		double selection_amount = 0.5;
 		double crossover_amount = 0.5;
 		int q = 5;
-		double mutation_prob = 0.3;
-		double max_simil = 0.8;
+		double mutation_prob = 1.0;
+		double max_simil = 1.0;
 		
-		EvolutionaryCircle sudevo = new EvolutionaryCircle("die base", "firsttry", path, popsize, max_generations, selection_amount,
+		EvolutionaryCircle sudevo = new EvolutionaryCircle("Sudevo_Database", "first_trial", path, popsize, max_generations, selection_amount,
 									crossover_amount, q, mutation_prob, max_simil);
 
 	}
