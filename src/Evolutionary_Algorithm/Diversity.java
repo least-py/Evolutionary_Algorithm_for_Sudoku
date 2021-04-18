@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Diversity {
 
-	public static int N = Sudevo.Main.N;
+	public static int N = Main.N;
 	
 	public static double calc_similarity(int[] genome_1, int[] genome_2) {
 		int match = 0;

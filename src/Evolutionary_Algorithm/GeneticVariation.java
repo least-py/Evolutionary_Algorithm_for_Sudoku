@@ -7,9 +7,9 @@ import java.util.Comparator;
 
 public class GeneticVariation {
 
-	private static int[][] adjacency_matrix = adjacency_matrix();
-	private static int N = Sudevo.Main.N;
+	private static int N = Main.N;
 	private static int N_squared = N*N;
+	private static int[][] adjacency_matrix = adjacency_matrix();
 	
 	public static Individual tournament_selection(Individual[] pop, int q) {
 		Individual[] ivs = new Individual[q];

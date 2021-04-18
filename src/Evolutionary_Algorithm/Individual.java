@@ -3,7 +3,7 @@ package Evolutionary_Algorithm;
 
 public class Individual {
 
-	private static int N = Sudevo.Main.N;
+	private static int N = Main.N;
 	private int id;
 	private double similarity;
 	private int association;

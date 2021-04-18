@@ -4,7 +4,7 @@ package Evolutionary_Algorithm;
 public class EvolutionaryCircle {
 	
 	private static int id;
-	private int N = Sudevo.Main.N;
+	private int N = Main.N;
 	private int generation;
 	private static Individual[] initial_pop;
 	private String tablename;
@@ -30,6 +30,9 @@ public class EvolutionaryCircle {
 			tracker.database_entry(tablename, iv, generation);
 	
 		}
+		
+		this.circle(tracker, populationsize, max_generations, selection_amount, crossover_amount, q, mutation_prob);
+		
 	}
 	
 	private void circle(Tracking tracker, int popsize,  int max_generations, double selection_amount,
