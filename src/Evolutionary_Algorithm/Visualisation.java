@@ -3,13 +3,14 @@ package Evolutionary_Algorithm;
 import java.awt.geom.Rectangle2D;
 import java.io.*;
 
+
 import org.apache.batik.dom.GenericDOMImplementation;
 import org.apache.batik.svggen.SVGGraphics2D;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
-import org.w3c.dom.DOMImplementation;
-import org.w3c.dom.Document;
+//import org.w3c.dom.DOMImplementation;
+//import org.w3c.dom.Document;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -539,13 +540,15 @@ public class Visualisation {
 			}
 			Rectangle2D.Double r = new Rectangle2D.Double(0, 0, 1300, 700);
 			File f = new File(chartpath + "popularity_" + tn + ".svg");
+			
+			/*
 			try {
 				exportChartAsSVG(chart, r, f);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+^			*/
 		}
 
 		/**
@@ -615,6 +618,7 @@ public class Visualisation {
 		 * @throws IOException wenn das Schreiben der Datei fehlschlägt
 		 */
 		public static void exportChartAsSVG(JFreeChart chart, Rectangle2D.Double bounds, File svgFile) throws IOException {
+			/*
 			// Get a DOMImplementation and create an XML document
 			DOMImplementation domImpl = GenericDOMImplementation.getDOMImplementation();
 			Document document = domImpl.createDocument(null, "svg", null);
@@ -628,9 +632,10 @@ public class Visualisation {
 			// Write svg file
 			OutputStream outputStream = new FileOutputStream(svgFile);
 			Writer out = new OutputStreamWriter(outputStream, "UTF-8");
-			svgGenerator.stream(out, true /* use css */);
+			svgGenerator.stream(out, true );
 			outputStream.flush();
 			outputStream.close();
+			*/
 		}
 
 		

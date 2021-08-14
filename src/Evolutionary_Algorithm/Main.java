@@ -21,8 +21,8 @@ public class Main {
 		double mutation_prob = 1.0;
 		double max_simil = 1.0;
 		
-		//EvolutionaryCircle sudevo = new EvolutionaryCircle("Sudevo_Database", "first_trial", path, popsize, max_generations, selection_amount,
-		//							crossover_amount, q, mutation_prob, max_simil);
+		EvolutionaryCircle sudevo = new EvolutionaryCircle("Sudevo_Database", "first_trial", path, popsize, max_generations, selection_amount,
+									crossover_amount, q, mutation_prob, max_simil);
 
 		Visualisation.visu("first_trial", "Sudevo_Database");
 	}
