@@ -345,16 +345,16 @@ public class Visualisation {
 			yax = new NumberAxis("Fitness");
 
 			// Erstellen eines Ausgabefensters
-			// punkteframe = new ApplicationFrame("Fitnessverlauf_"+tn);
+			punkteframe = new ApplicationFrame("Fitnessverlauf_"+tn);
 
 			plot = new XYPlot(dataset, xax, yax, dot);
 			chart = new JFreeChart(plot);
 			chart = ChartFactory.createXYLineChart("Fitnessverlauf", "Generationen", "Fitness", dataset,
 					PlotOrientation.VERTICAL, true, true, true);
 			chartPanel = new ChartPanel(chart);
-			// punkteframe.setContentPane(chartPanel);
-			// punkteframe.pack();
-			// punkteframe.setVisible(true);
+			punkteframe.setContentPane(chartPanel);
+			punkteframe.pack();
+			punkteframe.setVisible(true);
 
 			// Die Größe der Population bleibt konstant
 			int popsize = 0;

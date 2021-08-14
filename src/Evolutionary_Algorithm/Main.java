@@ -13,11 +13,11 @@ public class Main {
 	public static void main(String[] args) {
 		file_chooser();
 		
-		int popsize = 100;
+		int popsize = 50;
 		int max_generations = 5000;
 		double selection_amount = 0.5;
 		double crossover_amount = 0.5;
-		int q = 5;
+		int q = 10;
 		double mutation_prob = 1.0;
 		double max_simil = 1.0;
 		
